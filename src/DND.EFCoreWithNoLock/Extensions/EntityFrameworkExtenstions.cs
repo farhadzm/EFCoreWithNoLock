@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace DND.EFWithNoLock.Extensions
+namespace DND.EFCoreWithNoLock.Extensions
 {
     public static class EntityFrameworkExtenstions
     {
