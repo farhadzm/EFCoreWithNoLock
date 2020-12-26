@@ -33,7 +33,7 @@ namespace DND.EFCoreWithNoLock.Extensions
             List<T> result = default;
             using (var scope = CreateTrancation())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
@@ -47,7 +47,7 @@ namespace DND.EFCoreWithNoLock.Extensions
             List<T> result = default;
             using (var scope = CreateTrancation())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
@@ -61,7 +61,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         {
             using (var scope = CreateTrancation())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
@@ -75,7 +75,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         {
             using (var scope = CreateTrancation())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
@@ -88,7 +88,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         {
             using (var scope = CreateTrancationAsync())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
@@ -101,7 +101,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         {
             using (var scope = CreateTrancationAsync())
             {
-                if (expression != null)
+                if (expression is object)
                 {
                     query = query.Where(expression);
                 }
