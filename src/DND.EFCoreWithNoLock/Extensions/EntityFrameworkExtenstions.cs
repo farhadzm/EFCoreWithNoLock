@@ -45,7 +45,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         public static async Task<List<T>> ToListWithNoLockAsync<T>(this IQueryable<T> query, CancellationToken cancellationToken = default, Expression<Func<T, bool>> expression = null)
         {
             List<T> result = default;
-            using (var scope = CreateTrancation())
+            using (var scope = CreateTrancationAsync())
             {
                 if (expression is object)
                 {
@@ -73,7 +73,7 @@ namespace DND.EFCoreWithNoLock.Extensions
 
         public static async Task<T> FirstOrDefaultWithNoLockAsync<T>(this IQueryable<T> query, CancellationToken cancellationToken = default, Expression<Func<T, bool>> expression = null)
         {
-            using (var scope = CreateTrancation())
+            using (var scope = CreateTrancationAsync())
             {
                 if (expression is object)
                 {
@@ -86,7 +86,7 @@ namespace DND.EFCoreWithNoLock.Extensions
         }
         public static int CountWithNoLock<T>(this IQueryable<T> query, Expression<Func<T, bool>> expression = null)
         {
-            using (var scope = CreateTrancationAsync())
+            using (var scope = CreateTrancation())
             {
                 if (expression is object)
                 {
